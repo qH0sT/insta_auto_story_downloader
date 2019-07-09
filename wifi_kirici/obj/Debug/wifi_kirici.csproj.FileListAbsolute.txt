@@ -1,0 +1,12 @@
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\wifi_kirici.exe.config
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\wifi_kirici.exe
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\wifi_kirici.pdb
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.Form1.resources
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.Properties.Resources.resources
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.csproj.GenerateResource.Cache
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.exe
+c:\users\harun\documents\visual studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.pdb
+C:\Users\Harun\Documents\Visual Studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Harun\Documents\Visual Studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Harun\Documents\Visual Studio 2015\Projects\wifi_kirici\wifi_kirici\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Harun\Documents\Visual Studio 2015\Projects\wifi_kirici\wifi_kirici\obj\Debug\wifi_kirici.csprojResolveAssemblyReference.cache

@@ -1,7 +1,8 @@
-﻿using System.IO;
+using System.IO;
 using System.Net;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.ComponentModel;
 using System.Threading;
 using System.Diagnostics;
 using System.Text;
@@ -17,12 +18,18 @@ namespace wifi_kirici
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
             if (File.Exists("data.base")) { Oku(); }
+            
         }
        enum Durum
         {
             Hikaye_Yok,
             User_Yok,
             İndi
+        }
+        public delegate void _dt(byte[] bt, string nick);
+        public void dt(byte[] bit, string s)
+        {
+            dataGridView1.Rows.Add(bit, s);
         }
         int g = 0;
         int dos = 0;
@@ -36,10 +43,12 @@ namespace wifi_kirici
                 {
                     ServicePointManager.Expect100Continue = true;
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                    
                     IEnumerable<DataGridViewRow> dtgr = dataGridView1.Rows.Cast<DataGridViewRow>().Where(b => b.Cells[1].Value.ToString() == lv.Text);
                     if (dtgr.Count() == 0)
                     {
-                        try {
+                        try
+                        {
 
                             WebClient profil_resmi = new WebClient();
                             string pf_resmi = profil_resmi.DownloadString("https://www.instadp.com/profile/" + lv.Text);
@@ -52,16 +61,14 @@ namespace wifi_kirici
                                 {
                                     if (linke.GetAttributeValue("href", "Gösterilecek veri yok.").Contains("https://scontent"))
                                     {
-                                        dataGridView1.Rows.Add(profil_resmi.DownloadData(linke.GetAttributeValue("href", "Gösterilecek veri yok.")), lv.Text);
-
+                                        Invoke(new _dt(dt), profil_resmi.DownloadData(linke.GetAttributeValue("href", "Gösterilecek veri yok.")),lv.Text);
                                     }
 
                                 }
                             }
-                        } catch (Exception) { dataGridView1.Rows.Add(System.Drawing.Image.FromFile("nichts.png"), "profil_resmi_yüklenemedi"); }
-                    
+                        }
+                        catch (Exception) { dataGridView1.Rows.Add(System.Drawing.Image.FromFile("nichts.png"), "profil_resmi_yüklenemedi"); }
                     }
-
                     ////Hikaye Kısmı////
                     wc = new WebClient();
                     WebClient _wc_ = new WebClient();
